@@ -17,4 +17,6 @@ class LoginSteps(private val loginPage: LoginPage = LoginPage()) {
     fun verifyUsernameError() = loginPage.waitForUsernameError()
 
     fun verifyPasswordError() = loginPage.waitForPasswordError()
+
+    fun verifyHomeScreenDisplayed() = loginPage.waitForHomeScreen()
 }

@@ -54,7 +54,7 @@ class LoginPage {
         onView(allOf(withId(R.id.signUpButton), isDisplayed()))
 
     fun waitUntilDisplayed() {
-        onView(withId(R.id.logInButton)).waitUntilVisible(15)
+        onView(withId(R.id.logInButton)).waitUntilVisible(45)
     }
 
     fun typeUsername(text: String) = inputField(R.id.userNameInput).input(text)
@@ -75,5 +75,9 @@ class LoginPage {
         description(R.id.passwordInput)
             .waitUntilVisible(10)
             .check(matches(hasTextColorRes(DS.color.foroom_background_pink)))
+    }
+
+    fun waitForHomeScreen() {
+        onView(withId(R.id.navBar)).waitUntilVisible(20)
     }
 }

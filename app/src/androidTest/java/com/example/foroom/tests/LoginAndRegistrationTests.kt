@@ -15,12 +15,7 @@ import org.junit.runner.RunWith
 import org.koin.core.context.GlobalContext
 
 
-class ClearSessionRule : ExternalResource() {
-    override fun before() {
-        val store = GlobalContext.get().get<ForoomUserDataStore>()
-        runBlocking { store.clearUserData() }
-    }
-}
+
 
 @RunWith(AndroidJUnit4::class)
 class LoginAndRegistrationTests {
