@@ -24,4 +24,7 @@ class ProfilePage {
     fun waitForLabel(text: String) {
         onView(allOf(withText(text), isDisplayed())).waitUntilVisible(15)
     }
+
+    fun tapSignOut() = onView(allOf(withId(R.id.signOutItem), isDisplayed())).tap()
+
 }

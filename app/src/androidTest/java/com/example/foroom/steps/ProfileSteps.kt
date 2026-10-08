@@ -33,4 +33,8 @@ class ProfileSteps(
         changePasswordPage.typeRepeatPassword(newPassword)
         changePasswordPage.tapConfirm()
     }
+
+    fun signOut() {
+        profilePage.tapSignOut()
+    }
 }
